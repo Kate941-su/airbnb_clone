@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_training/appbar_icon_util.dart';
+import 'package:flutter_training/appbar/appbar_icon_util.dart';
 
 class AppbarIconList extends ConsumerWidget {
   const AppbarIconList({super.key});

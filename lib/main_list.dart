@@ -1,6 +1,9 @@
+import 'package:flutter_training/main_illust_parts.dart';
+import 'package:flutter_training/main_text_parts.dart';
 import 'package:flutter_training/main_util.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
+import 'color/colors.dart';
 
 class MainList extends ConsumerWidget {
   const MainList({super.key});
@@ -8,7 +11,7 @@ class MainList extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      color: Colors.white,
+      color: AirbnbColor.white,
       child: (ListView.builder(
           itemCount: thumbnailImageList.length,
           itemBuilder: (context, index) {
@@ -27,57 +30,8 @@ class MainContent extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       children: [
-        Padding(
-          padding:
-              const EdgeInsets.only(left: 24, right: 24, top: 24, bottom: 12),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Stack(
-              alignment: Alignment.topRight,
-              children: [
-                thumbnailImageList[index],
-                Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.favorite_outline),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: ListTile(
-                title: Text(
-                  'Place data',
-                  style: TextStyle(color: Colors.black),
-                ),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'distance data',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                    Text(
-                      'date data',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                    Text(
-                      'money data',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
+        MainIllustParts(index: index),
+        const MainTextParts(),
       ],
     );
   }

@@ -1,4 +1,4 @@
-import 'gen/assets.gen.dart';
+import '../gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 List<String> appbarIconNameList = [
