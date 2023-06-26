@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_training/appbar/appbar_icon_list.dart';
 import 'package:flutter_training/appbar/appbar_title_page.dart';
 import 'package:flutter_training/bottom_navigation_bar/bottom_navigation_bar_items.dart';
-import 'package:flutter_training/main_list.dart';
+import 'package:flutter_training/main/main_list.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'gen/assets.gen.dart';
 import 'color/colors.dart';

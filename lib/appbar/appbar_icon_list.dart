@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_training/appbar/appbar_icon_util.dart';
+import '../color/colors.dart';
 
 class AppbarIconList extends ConsumerWidget {
   const AppbarIconList({super.key});
@@ -13,6 +14,7 @@ class AppbarIconList extends ConsumerWidget {
     }
     return list;
   }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return SizedBox(
@@ -35,20 +37,17 @@ class _AppbarIcon extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
       padding: const EdgeInsets.all(8),
-      child: Column(children: [
-        SizedBox(
-          width: 24,
-            child: image
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
-          child: Text(text,style: TextStyle(
-            color: Colors.black,
-            fontSize: 10
+      child: Column(
+        children: [
+          SizedBox(width: 24, child: image),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Text(
+              text,
+              style: TextStyle(color: AirbnbColor.black, fontSize: 10),
+            ),
           ),
-          ),
-        ),
-      ],
+        ],
       ),
     );
   }

@@ -15,26 +15,27 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$Favorite {
-  bool get isFavorite => throw _privateConstructorUsedError;
+mixin _$FavoriteId {
+  int? get id => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $FavoriteCopyWith<Favorite> get copyWith =>
+  $FavoriteIdCopyWith<FavoriteId> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FavoriteCopyWith<$Res> {
-  factory $FavoriteCopyWith(Favorite value, $Res Function(Favorite) then) =
-      _$FavoriteCopyWithImpl<$Res, Favorite>;
+abstract class $FavoriteIdCopyWith<$Res> {
+  factory $FavoriteIdCopyWith(
+          FavoriteId value, $Res Function(FavoriteId) then) =
+      _$FavoriteIdCopyWithImpl<$Res, FavoriteId>;
   @useResult
-  $Res call({bool isFavorite});
+  $Res call({int? id});
 }
 
 /// @nodoc
-class _$FavoriteCopyWithImpl<$Res, $Val extends Favorite>
-    implements $FavoriteCopyWith<$Res> {
-  _$FavoriteCopyWithImpl(this._value, this._then);
+class _$FavoriteIdCopyWithImpl<$Res, $Val extends FavoriteId>
+    implements $FavoriteIdCopyWith<$Res> {
+  _$FavoriteIdCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -44,89 +45,88 @@ class _$FavoriteCopyWithImpl<$Res, $Val extends Favorite>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isFavorite = null,
+    Object? id = freezed,
   }) {
     return _then(_value.copyWith(
-      isFavorite: null == isFavorite
-          ? _value.isFavorite
-          : isFavorite // ignore: cast_nullable_to_non_nullable
-              as bool,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_FavoriteCopyWith<$Res> implements $FavoriteCopyWith<$Res> {
-  factory _$$_FavoriteCopyWith(
-          _$_Favorite value, $Res Function(_$_Favorite) then) =
-      __$$_FavoriteCopyWithImpl<$Res>;
+abstract class _$$_FavoriteIdCopyWith<$Res>
+    implements $FavoriteIdCopyWith<$Res> {
+  factory _$$_FavoriteIdCopyWith(
+          _$_FavoriteId value, $Res Function(_$_FavoriteId) then) =
+      __$$_FavoriteIdCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isFavorite});
+  $Res call({int? id});
 }
 
 /// @nodoc
-class __$$_FavoriteCopyWithImpl<$Res>
-    extends _$FavoriteCopyWithImpl<$Res, _$_Favorite>
-    implements _$$_FavoriteCopyWith<$Res> {
-  __$$_FavoriteCopyWithImpl(
-      _$_Favorite _value, $Res Function(_$_Favorite) _then)
+class __$$_FavoriteIdCopyWithImpl<$Res>
+    extends _$FavoriteIdCopyWithImpl<$Res, _$_FavoriteId>
+    implements _$$_FavoriteIdCopyWith<$Res> {
+  __$$_FavoriteIdCopyWithImpl(
+      _$_FavoriteId _value, $Res Function(_$_FavoriteId) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isFavorite = null,
+    Object? id = freezed,
   }) {
-    return _then(_$_Favorite(
-      isFavorite: null == isFavorite
-          ? _value.isFavorite
-          : isFavorite // ignore: cast_nullable_to_non_nullable
-              as bool,
+    return _then(_$_FavoriteId(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_Favorite implements _Favorite {
-  _$_Favorite({this.isFavorite = false});
+class _$_FavoriteId implements _FavoriteId {
+  _$_FavoriteId({this.id});
 
   @override
-  @JsonKey()
-  final bool isFavorite;
+  final int? id;
 
   @override
   String toString() {
-    return 'Favorite(isFavorite: $isFavorite)';
+    return 'FavoriteId(id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Favorite &&
-            (identical(other.isFavorite, isFavorite) ||
-                other.isFavorite == isFavorite));
+            other is _$_FavoriteId &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isFavorite);
+  int get hashCode => Object.hash(runtimeType, id);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FavoriteCopyWith<_$_Favorite> get copyWith =>
-      __$$_FavoriteCopyWithImpl<_$_Favorite>(this, _$identity);
+  _$$_FavoriteIdCopyWith<_$_FavoriteId> get copyWith =>
+      __$$_FavoriteIdCopyWithImpl<_$_FavoriteId>(this, _$identity);
 }
 
-abstract class _Favorite implements Favorite {
-  factory _Favorite({final bool isFavorite}) = _$_Favorite;
+abstract class _FavoriteId implements FavoriteId {
+  factory _FavoriteId({final int? id}) = _$_FavoriteId;
 
   @override
-  bool get isFavorite;
+  int? get id;
   @override
   @JsonKey(ignore: true)
-  _$$_FavoriteCopyWith<_$_Favorite> get copyWith =>
+  _$$_FavoriteIdCopyWith<_$_FavoriteId> get copyWith =>
       throw _privateConstructorUsedError;
 }
